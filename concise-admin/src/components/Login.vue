@@ -162,6 +162,7 @@ export default {
     height:100%;
     display:flex;
     justify-content: center;
+    background:url('../assets/fonts/login.svg') no-repeat center center;
     .loginCenter{
       width:368px;
       padding:140px 0 0;
