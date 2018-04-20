@@ -16,9 +16,9 @@ git clone  git@github.com:webxiaoma/vue-admin.git
 1.简洁版
 
 - [预览](http://www.webxiaoma.com) 
-- [了解该项目](http://www.webxiaoma.com)
+- [了解该项目](https://github.com/webxiaoma/vue-admin/tree/dev/concise-admin)
 
-1.复杂版
+2.复杂版
 
 - [预览](http://www.webxiaoma.com) 
 - [了解该项目](http://www.webxiaoma.com)
