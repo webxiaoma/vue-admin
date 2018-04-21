@@ -5,11 +5,22 @@
 </template>
 
 <script>
+// import {mapActions} from 'vuex'
+
+
 export default {
   data () {
     return {
 
     }
+  },
+  created(){
+    // this.listRequest().then(res=>{
+    //   // console.log(res)
+    // })
+  },
+  methods:{
+    // ...mapActions('list/home',['listRequest']),
   }
 }
 </script>

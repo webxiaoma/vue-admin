@@ -13,3 +13,18 @@ npm install
 npm start
 ```
 
+
+### 使用的插件
+
+
+1. mockJs 数据模拟插件 [使用说明](https://github.com/nuysoft/Mock/wiki)
+2. mockJs 数据模拟插件
+3. mockJs 数据模拟插件
+4. mockJs 数据模拟插件
+5. mockJs 数据模拟插件
+6. mockJs 数据模拟插件
+7. mockJs 数据模拟插件
+8. mockJs 数据模拟插件
+
+
+
