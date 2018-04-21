@@ -5,6 +5,7 @@ import App from './App'
 import store from './store'
 import router from './router'
 
+require('./mock') // 引入mock 假数据
 Vue.config.productionTip = false
 
 

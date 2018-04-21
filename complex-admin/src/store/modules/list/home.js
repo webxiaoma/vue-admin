@@ -1,4 +1,4 @@
-// import { } from  '@/api'
+import { homeApi } from  '@/api'
 // import { } from '../mutation-types'
 
 const state = {
@@ -6,7 +6,9 @@ const state = {
 }
 
 const actions = {
-
+      listRequest(){
+        return homeApi.homeList();
+      }
 
 }
 

@@ -1,13 +1,12 @@
 import request from '@/utils/request'
+import {homeUrl} from './apis'
 
-export default{
-     home(){ // 首页数据请求
-        return request('url',{
-          // method: 请求方法,
-          // patterns：作为路径的数据(数组)，
-          // params: query形式的数据,
-          // data: bode携带的数据,
-          // headers: 头部设置,
+
+export default {
+     homeList(){ //首页列表请求
+        return request(homeUrl.LIST,{
+          method: 'get',
+          data:{obj:111}
         })
      }
 }

@@ -17,14 +17,14 @@
                     <el-tabs tab-position="top" style="height: 200px;">
                       <el-tab-pane label="账号密码登录">
                           <div class="loginInput">
-                              <el-form :model="form1"  :rules="rules1" ref="loginDataOne" class="demo-ruleForm">
-                                <el-form-item  prop="user">
-                                  <el-input type="text" v-model="form1.user" placeholder="请输入用户名">
+                              <el-form :model="loginData"  :rules="rules1" ref="loginDataOne" class="demo-ruleForm">
+                                <el-form-item  prop="userName">
+                                  <el-input type="text" v-model="loginData.userName" placeholder="admin">
                                     <i class="iconfont icon-denglu" slot="suffix"></i>
                                   </el-input>
                                 </el-form-item>
                                 <el-form-item  prop="password">
-                                  <el-input @keyup.enter.native="submitOne" type="password" v-model="form1.password" placeholder="请输入登录密码">
+                                  <el-input @keyup.enter.native="submitOne" type="password" v-model="loginData.password" placeholder="123456">
                                      <i class="iconfont icon-denglumima" slot="suffix"></i>
                                   </el-input>
                                 </el-form-item>
@@ -33,7 +33,7 @@
                                   <router-link to="/login">忘记密码</router-link>
                                 </div>
                                 <el-form-item class="submit">
-                                  <el-button @click="submitOne" type="primary" :loading="loadingOne">登录</el-button>
+                                  <el-button @click="submit" type="primary" :loading="loadingOne">登录</el-button>
                                 </el-form-item>
                               </el-form>
                           </div>
@@ -71,6 +71,7 @@
 </template>
 
 <script>
+import {mapState,mapActions} from 'vuex'
 import {RulesUserName,RulesPassword,RulesPhone,RulesCorde} from '@/public/rules'
 
 export default {
@@ -81,12 +82,8 @@ export default {
        interval:'',
        loadingOne: false,
        checked:false,
-        form1: {
-          user:'',
-          pass: '',
-        },
-        rules1:{
-          user: [
+       rules1:{
+          userName: [
             { validator: RulesUserName, trigger: 'blur' }
           ],
           password: [
@@ -107,16 +104,24 @@ export default {
         }
     }
   },
+  computed:{
+    ...mapState('login',['loginData']),
+  },
   methods:{
-    submitOne(){  // 提交按钮二
+    ...mapActions('login',['loginRequest']),
+    submit(){  // 提交按钮二
        this.$refs.loginDataOne.validate((valid) => { // 登录表单验证
               if (valid) {
                  this.loadingOne = true;
 
-                // 验证通过
-                setTimeout(()=>{
+                this.loginRequest().then(res=>{
+                  console.log(res)
                   this.loadingOne = false;
-                },4000)
+                  this.$router.push('/')
+                }).catch(error=>{
+                  console.log(res)
+
+                });
 
               } else {
                 return false;
