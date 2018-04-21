@@ -13,9 +13,9 @@
                   <ul class="ul">
                     <li class="problem">
                       <el-tooltip effect="dark" content="使用帮助" placement="bottom">
-                        <router-link to="/">
+                        <a href="https://github.com/webxiaoma/vue-admin/tree/dev/complex-admin">
                               <i class="iconfont icon-problem"></i>
-                        </router-link>
+                        </a>
                       </el-tooltip>
                     </li>
                     <li class="person">

@@ -48,7 +48,7 @@ npm start
 |   |   |-- Login.vue                   // 登录组件
 |   |   |-- MainLayout.vue              // 网站整体构架的搭建组建
 |   |-- public                       // 公共方法
-|   |   |-- nav.js                      // 导航内容管理包括导航标题、icon、router （基于element 导航组件） 
+|   |   |-- nav.js                      // 导航内容管理包括导航标题、icon、router （基于element 导航组件）
 |   |   |-- rules.js                    // 表单的验证规则，（基于element的表单验证）
 |   |-- router                       // 路由文件
 |   |   |-- index.js                    // 路由管理
@@ -68,9 +68,9 @@ npm start
 
 ### 三、注意事项
 
-- 该项目已经依赖了 `axios`、`element-ui`、`vue-router`、`vuex`,并使用了 `less` 来处理css,如果您想更相应的版本，请查看 `package.json`
+1. 该项目已经依赖了 `axios`、`element-ui`、`vue-router`、`vuex`,并使用了 `less` 来处理css,如果您想更相应的版本，请查看 `package.json`
 
-- 关于数据请求，也就是utils 文件中的 request.js 暴露出的请求接口如下
+2. 关于数据请求，也就是utils 文件中的 request.js 暴露出的请求接口如下
 
 ```
 request('url',{ // url 为apis中的请求路径 可以查看api中的home.js文件了解

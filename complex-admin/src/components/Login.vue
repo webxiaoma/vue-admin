@@ -7,7 +7,7 @@
                    <img src="../assets/img/logo.jpg" />
                    <span>后台管理</span>
                </div>
-               <p class="text">您可以访问 github 来了解项目 或
+               <p class="text">您可以访问 <a href="https://github.com/webxiaoma/vue-admin/tree/dev/complex-admin">github</a> 来了解项目 或
                  <router-link to="/">访问首页</router-link>
                </p>
 

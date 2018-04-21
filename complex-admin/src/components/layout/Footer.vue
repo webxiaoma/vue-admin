@@ -5,7 +5,7 @@
           <a href="http://www.webxiaoma.com/" target="_blank">
             <i class="iconfont icon-wangzhan"> 个人网站</i>
           </a>
-          <a href="">
+          <a href="https://github.com/webxiaoma/vue-admin/tree/dev/complex-admin">
             <i class="iconfont icon-GitHub"> GitHub</i>
           </a>
           <span></span>
