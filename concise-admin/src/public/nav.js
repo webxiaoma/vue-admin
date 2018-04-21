@@ -1,6 +1,6 @@
 const Nav = [{
-    title:'列表信息', // 主title
-    icon:'el-icon-menu', // 一级导航图标
+    title:'列表信息', // title名
+    icon:'el-icon-menu', // 导航icon图标
     link:[{
       router:'/', //  一级导航路径
       title:'列表一', //  一级导航title

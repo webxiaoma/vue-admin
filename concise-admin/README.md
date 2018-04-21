@@ -81,3 +81,6 @@ request('url',{ // url 为apis中的请求路径 可以查看api中的home.js文
     // headers: 头部设置,
 })
 ```
+
+3. 关于右边导航的生成，导航生成格式在`public` 文件中的 `nav.js` 文件中
+
