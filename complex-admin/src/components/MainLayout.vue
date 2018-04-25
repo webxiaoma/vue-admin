@@ -8,7 +8,7 @@
           <div class="right">
               <el-container>
                 <el-container>
-                  <el-header height="64px">
+                  <el-header>
                     <header-layout></header-layout>
                   </el-header>
                   <el-main>
@@ -97,6 +97,10 @@ export default {
     }
     .el-container{
       height:100%;
+    }
+    .el-header{
+      min-height:64px;
+      height:auto!important;
     }
     .el-header,.el-footer,.el-main{
       padding:0;

@@ -1,6 +1,6 @@
 <template>
   <div class="homeWrap">
-       首页
+
   </div>
 </template>
 
@@ -25,7 +25,8 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="less" scoped>
+@import url("../../theme/base-theme.less");
 
 .homeWrap{
    width:100%;

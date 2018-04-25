@@ -9,7 +9,7 @@ export default {
   name: 'App',
   data() {
      return {
-       
+
      }
   }
 }
@@ -20,6 +20,7 @@ export default {
 
 body,html {
   height: 100%;
+  width:100%;
   padding:0;
   margin:0;
   background-color: @body-color;

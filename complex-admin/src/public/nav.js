@@ -3,10 +3,10 @@ const Nav = [{
     icon:'el-icon-menu', // 一级导航图标
     link:[{
       router:'/', //  一级导航路径
-      title:'列表一', //  一级导航title
+      title:'数据列表', //  一级导航title
     },{
-      router:'/none',
-      title:'不存在的页面一',
+      router:'/analysis',
+      title:'数据分析',
     }],
     children:[{  // 二级导航
       title:'选项4',

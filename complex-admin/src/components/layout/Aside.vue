@@ -23,9 +23,11 @@
             :collapse="isAsideNav"
             :router="true"
             :default-active="pathAcitve"
+            @select="selectNav"
             class="el-menu-vertical-demo"
             text-color="#b8b7b7"
-            active-text-color="#fff">
+            active-text-color="#fff"
+            background-color="#000c17">
                <el-submenu v-for="(item,index) in nav" :key="index" :index="index.toString()">
                     <template slot="title">
                       <i :class="item.icon"></i>
@@ -65,7 +67,11 @@ export default {
   computed: {
      ...mapState(['isAsideNav']),
   },
-
+  methods:{
+    selectNav(index, indexPath){
+      console.log(index, indexPath)
+    }
+  }
 }
 </script>
 

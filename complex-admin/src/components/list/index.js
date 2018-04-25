@@ -1,4 +1,5 @@
 import Home from './Home'
+import Analysis from './Analysis'
 
 
-export {Home}
+export {Home,Analysis}
