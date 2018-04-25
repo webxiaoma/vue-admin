@@ -25,7 +25,8 @@
             :default-active="pathAcitve"
             class="el-menu-vertical-demo"
             text-color="#b8b7b7"
-            active-text-color="#fff">
+            active-text-color="#fff"
+            background-color="#000c17">
                <el-submenu v-for="(item,index) in nav" :key="index" :index="index.toString()">
                     <template slot="title">
                       <i :class="item.icon"></i>

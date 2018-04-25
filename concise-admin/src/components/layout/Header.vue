@@ -3,7 +3,7 @@
          <el-row>
            <el-col :span="10">
                <div class="navBtn">
-                 <p  @click="controlNav">
+                 <p  @click="controlNav" class="hidden-sm-and-down">
                    <i :class="!isAsideNav?'iconfont icon-shouqi':'iconfont icon-zhankai'"></i>
                  </p>
                </div>
