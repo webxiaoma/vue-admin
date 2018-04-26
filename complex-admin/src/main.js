@@ -65,8 +65,9 @@ Vue.use(Tooltip)
 Vue.use(Breadcrumb)
 Vue.use(BreadcrumbItem)
 
-
-
+// chartJs 组件
+import { Bar } from 'vue-chartjs'
+Vue.use(Bar)
 
 /* eslint-disable no-new */
 new Vue({

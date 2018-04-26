@@ -23,7 +23,6 @@
             :collapse="isAsideNav"
             :router="true"
             :default-active="pathAcitve"
-            @select="selectNav"
             class="el-menu-vertical-demo"
             text-color="#b8b7b7"
             active-text-color="#fff"
@@ -68,9 +67,7 @@ export default {
      ...mapState(['isAsideNav']),
   },
   methods:{
-    selectNav(index, indexPath){
-      console.log(index, indexPath)
-    }
+
   }
 }
 </script>
