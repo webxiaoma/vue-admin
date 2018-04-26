@@ -87,15 +87,18 @@ export default {
 }
 .loayoutMain{
     height:100%;
+    width:100%;
     display:flex;
     .left{
       background:@minor-color-1;
     }
     .right{
+      width:100%;
       height:100%;
       flex-grow:1;
     }
     .el-container{
+      width:100%;
       height:100%;
     }
     .el-header{
@@ -106,12 +109,15 @@ export default {
       padding:0;
     }
     .el-main{
+      width:100%;
      display: flex;
      flex-direction: column;
       .routerView{
+        width:100%;
         position: relative;
         display:flex;
         flex:1;
+        width:100%;
       }
     }
 }
