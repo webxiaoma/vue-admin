@@ -1,7 +1,7 @@
 <template>
    <div class="dragWrap">
       <div class="dragCenter">
-
+         正在建设中...
       </div>
    </div>
 </template>
@@ -21,13 +21,14 @@ export default {
 <style lang="less" scoped>
 @import url('../../theme/base-theme.less');
 
-.analysis{
-  width:99.6%;
+.dragWrap{
+  width:99.8%;
   padding:20px;
-  .analysisCenter{
+  .dragCenter{
     width:100%;
     padding:20px;
     background:@minor-color-4;
+    text-align: center;
   }
 }
 </style>
