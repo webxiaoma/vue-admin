@@ -3,7 +3,7 @@ import Vuex from 'vuex'
 import {globalVar} from './mutation-types'
 import createLogger from 'vuex/dist/logger'
 
-import home from './modules/list'
+import list from './modules/list'
 import login from './modules/login'
 
 Vue.use(Vuex)
@@ -18,7 +18,7 @@ export default new Vuex.Store({
     },
     modules: {
         login,
-        home,
+        list,
     },
     actions: {
         navChange({commit},val){

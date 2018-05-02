@@ -1,6 +1,6 @@
 const Nav = [{
     title:'列表信息', // title名
-    icon:'el-icon-menu', // 导航icon图标
+    icon:'fa fa-signal fa-lg', // 导航icon图标
     link:[{
       router:'/', //  一级导航路径
       title:'列表一', //  一级导航title
@@ -16,20 +16,24 @@ const Nav = [{
       }]
     }]
   },{
-    title:'错误界面',
-    icon:'el-icon-error',
-    link:[{
-      router:'/error/403',
-      title:'403',
+    title:'表单处理',
+    icon:'fa fa-check-square-o fa-lg',
+    router:'/home'
     },{
-      router:'/error/404',
-      title:'404',
-    },{
-      router:'/error/500',
-      title:'500',
-    }],
+        title:'错误界面',
+        icon:'fa fa-times-circle fa-lg',
+        link:[{
+          router:'/error/403',
+          title:'403',
+        },{
+          router:'/error/404',
+          title:'404',
+        },{
+          router:'/error/500',
+          title:'500',
+        }],
 
-}]
+    }]
 
 
 export {Nav}

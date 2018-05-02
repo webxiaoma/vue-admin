@@ -1,5 +1,5 @@
 import Home from './Home'
-import Analysis from './Analysis'
+import Drag from './Drag'
 
 
-export {Home,Analysis}
+export {Home,Drag}

@@ -35,7 +35,7 @@
                  <el-submenu  v-show="!item.router" :key="index" :index="index.toString()" >
                         <template slot="title">
                           <i :class="item.icon"></i>
-                          <span>{{item.title}}</span>
+                          <span v-show="!isAsideNav">{{item.title}}</span>
                         </template>
                         <el-menu-item v-for="linkOne in item.link" :key="linkOne.router"  :index="item.router?'':linkOne.router">{{linkOne.title}}</el-menu-item>
                         <el-submenu v-for="child in item.children" :key="child.title" :index="index +'C'"  v-show="item.children.length!==0">

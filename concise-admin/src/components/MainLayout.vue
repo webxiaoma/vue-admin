@@ -12,12 +12,13 @@
                     <header-layout></header-layout>
                   </el-header>
                   <el-main>
-                      <div class="routerView">
-                        <router-view></router-view>
-                      </div>
+                    <div class="routerView">
+                      <router-view></router-view>
                       <div class="footerLayout">
-                        <footer-layout></footer-layout>
+                          <footer-layout></footer-layout>
                       </div>
+                    </div>
+
                   </el-main>
                 </el-container>
               </el-container>
@@ -109,9 +110,10 @@ export default {
      display: flex;
      flex-direction: column;
       .routerView{
-        position: relative;
-        display:flex;
-        flex:1;
+          width:100%;
+          display:flex;
+          flex-direction: column;
+          flex:1;
       }
     }
 }

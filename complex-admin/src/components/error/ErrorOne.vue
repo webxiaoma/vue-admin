@@ -36,7 +36,7 @@ export default {
 .errorWarp{
    width:100%;
    height:100%;
-   position: absolute;
+   position: relative;
    top:0;
    bottom:0;
    display:flex;
@@ -59,7 +59,7 @@ export default {
          width:350px;
          height:400px;
          display:flex;
-         margin-right:60px;
+         margin-right:50px;
          background: url('../../assets/fonts/403.svg') no-repeat center  center;
          background-size: auto 100%;
       }

@@ -10,17 +10,34 @@ const Nav = [{
     router:'/', //  一级导航路径
     title:'数据列表', //  一级导航title
   },{
-    router:'/analysis',
+    router:'/drag',
     title:'拖拽列表',
   }],
-  children:[{  // 二级导航
-    title:'选项4',
-    link:[{
-      router:'/none',
-      title:'不存在的页面二'
-    }]
-  }]
 },{
+    title:'错误界面',
+    icon:'fa fa-times-circle fa-lg',
+    link:[{
+      router:'/error/403',
+      title:'403',
+    },{
+      router:'/error/404',
+      title:'404',
+    },{
+      router:'/error/500',
+      title:'500',
+    }],
+
+  }]
+
+
+export {Nav}
+
+
+/**
+
+
+
+,{
     title:'表单处理', // 主title
     icon:'fa fa-check-square-o fa-lg', // 一级导航图标
     link:[{
@@ -39,31 +56,36 @@ const Nav = [{
     }]
   },{
     title:'图表数据',
-    icon:'fa fa-area-chart fa-lg',
+    icon:'fa fa-area-chart ',
     link:[{
       router:'/error/403',
       title:'403',
-    }],
-
-  },{
-    title:'错误界面',
-    icon:'fa fa-times-circle fa-lg',
-    link:[{
-      router:'/error/403',
-      title:'403',
-    },{
-      router:'/error/404',
-      title:'404',
-    },{
-      router:'/error/500',
-      title:'500',
     }],
 
   },{
     title:'错误界面',
     icon:'fa fa-times-circle fa-lg',
     router:'/error/403',
-  }]
+  }
 
 
-export {Nav}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+**/

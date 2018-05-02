@@ -14,10 +14,11 @@
                   <el-main>
                       <div class="routerView">
                         <router-view></router-view>
+                        <div class="footerLayout">
+                          <footer-layout></footer-layout>
+                        </div>
                       </div>
-                      <div class="footerLayout">
-                        <footer-layout></footer-layout>
-                      </div>
+
                   </el-main>
                 </el-container>
               </el-container>
@@ -110,14 +111,13 @@ export default {
     }
     .el-main{
       width:100%;
-     display: flex;
-     flex-direction: column;
+      display: flex;
+      flex-direction: column;
       .routerView{
         width:100%;
-        position: relative;
         display:flex;
+        flex-direction: column;
         flex:1;
-        width:100%;
       }
     }
 }
