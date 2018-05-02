@@ -39,6 +39,11 @@ import {
   Tooltip,
   Breadcrumb,
   BreadcrumbItem,
+  Table,
+  TableColumn,
+  Select,
+  Option,
+  Loading,
 } from 'element-ui'
 
 Vue.use(Container)
@@ -64,6 +69,11 @@ Vue.use(Checkbox)
 Vue.use(Tooltip)
 Vue.use(Breadcrumb)
 Vue.use(BreadcrumbItem)
+Vue.use(Table)
+Vue.use(TableColumn)
+Vue.use(Select)
+Vue.use(Option)
+Vue.use(Loading)
 
 // chartJs 组件
 import { Bar } from 'vue-chartjs'

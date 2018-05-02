@@ -3,7 +3,7 @@ import Router from 'vue-router'
 import Store from '@/store'
 import {globalVar} from '../store/mutation-types'
 import MainLayout from '@/components/MainLayout'
-import {Home,Analysis} from '@/components/list'
+import {Home,Drag} from '@/components/list'
 import Login from '@/components/Login'
 import {ErrorOne,ErrorTwo,ErrorThree} from '@/components/error'
 
@@ -24,9 +24,9 @@ const router = new Router({
             breadcrumb:['列表信息','数据列表'],
           }
         },{
-          path: 'analysis',
+          path: 'drag',
           name: '数据分析',
-          component: Analysis,
+          component: Drag,
           meta:{
             breadcrumb:['列表信息','数据分析'],
           }

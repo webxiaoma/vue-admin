@@ -30,15 +30,32 @@ Mock.mock('/api/login','post',(req, res)=>{
 
 
 
-//  首页
+//  首页处理
 
-// Mock.mock('/api/list','get',(req, res)=>{
-//   console.log(req)
-//   return {
-//      data:[1,2,3,4]
-//   }
-
-// })
+const list = Mock.mock({
+  'list|1-5':[{
+      userName:'小王',
+      address:'上海'
+    },{
+      userName:'小李',
+      address:'北京'
+    },{
+      userName:'小牛',
+      address:'深圳'
+    },{
+      userName:'小王',
+      address:'河北'
+    },{
+      userName:'小刘',
+      address:'福建'
+    },{
+      userName:'小明',
+      address:'重庆'
+    }]
+})
+Mock.mock('/api/list','get',(req, res)=>{
+  return list
+})
 
 
 

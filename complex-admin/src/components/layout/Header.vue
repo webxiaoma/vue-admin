@@ -203,8 +203,11 @@ export default {
    }
    .breadCrumb{
       width:100%;
+      position: relative;
+      z-index: 1;
       padding:20px 20px 15px;
       background:@minor-color-4;
+      box-shadow:5px 0px 1px 1px @border-color;
    }
 
 }

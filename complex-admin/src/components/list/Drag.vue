@@ -1,24 +1,17 @@
 <template>
-   <div class="analysis">
-      <div class="analysisCenter">
-          <line-chart
-            :width="300"
-            :height="300">
-          </line-chart>
+   <div class="dragWrap">
+      <div class="dragCenter">
+
       </div>
    </div>
 </template>
 
 <script>
-import {LineChart} from '@/public/chart'
 
 export default {
-    components: {
-      LineChart
-    },
    data () {
       return {
-        datacollection: null
+
       }
     },
 
