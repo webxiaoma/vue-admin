@@ -81,11 +81,5 @@ router.beforeEach((to,from,next) =>{
 })
 
 
-// 为页面添加title
-router.afterEach((to,from)=>{
-    document.title = to.name
-})
-
-
 export default router;
 

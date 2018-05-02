@@ -27,17 +27,24 @@
             text-color="#b8b7b7"
             active-text-color="#fff"
             background-color="#000c17">
-               <el-submenu v-for="(item,index) in nav" :key="index" :index="index.toString()">
-                    <template slot="title">
-                      <i :class="item.icon"></i>
-                      <span>{{item.title}}</span>
-                    </template>
-                    <el-menu-item v-for="linkOne in item.link" :key="linkOne.router"  :index="linkOne.router">{{linkOne.title}}</el-menu-item>
-                    <el-submenu v-for="child in item.children" :key="child.title" :index="index + '-' + (index++)"  v-show="item.children.length!==0">
-                      <template slot="title">{{child.title}}</template>
-                      <el-menu-item v-for="linkChild in child.link" :key="linkChild.router" :index="linkChild.router">{{linkChild.title}}</el-menu-item>
-                    </el-submenu>
-               </el-submenu>
+              <div  v-for="(item,index) in nav" :key="index+'a'">
+                  <el-menu-item v-show="item.router"  :index="item.router?item.router:''" :key="index+'b'">
+                    <i :class="item.icon"></i>
+                    <span slot="title">{{item.title}}</span>
+                  </el-menu-item>
+                 <el-submenu  v-show="!item.router" :key="index" :index="index.toString()" >
+                        <template slot="title">
+                          <i :class="item.icon"></i>
+                          <span>{{item.title}}</span>
+                        </template>
+                        <el-menu-item v-for="linkOne in item.link" :key="linkOne.router"  :index="item.router?'':linkOne.router">{{linkOne.title}}</el-menu-item>
+                        <el-submenu v-for="child in item.children" :key="child.title" :index="index +'C'"  v-show="item.children.length!==0">
+                          <template slot="title">{{child.title}}</template>
+                          <el-menu-item v-for="linkChild in child.link" :key="linkChild.router" :index="linkChild.router">{{linkChild.title}}</el-menu-item>
+                        </el-submenu>
+                  </el-submenu>
+              </div>
+
           </el-menu>
         </el-col>
       </el-row>
@@ -130,7 +137,11 @@ export default {
         }
         .el-submenu .el-menu-item{
           background-color:@minor-color-2 !important;
+
         }
+         /deep/.el-menu-item i{
+            margin-right:5px;
+         }
         .el-submenu .el-menu-item:hover{
           background: @bg-hover-1 !important;
            color:@minor-color-4 !important;
@@ -141,6 +152,9 @@ export default {
         }
         /deep/.el-submenu__title{
           color:@font-color-3 !important;
+          i{
+            margin-right:5px;
+          }
         }
         /deep/.el-submenu__title:hover{
           background-color:@bg-hover-1 !important;

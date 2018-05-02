@@ -21,17 +21,20 @@ export default {
               label: "我的第一个",
               backgroundColor:[ // 背景颜色
                 'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
               ],
-              strokeColor: "rgba(20,20,20,1)",
+              strokeColor: "rgba(20,120,20,1)",
+              pointColor: "rgba(20,120,210,1)",
+              pointStrokeColor: "#786",
+              pointHighlightFill: "#098",
+              pointHighlightStroke: "rgba(220,220,220,1)",
               data: [65, 59, 80, 81, 56, 55, 40],
               borderWidth: 2,  // 线条宽度
+              scaleGridLineColor : "rgba(100,30,40,.05)",
           },
           {
             label: "我的第二个",
             backgroundColor:'rgba(111,18,205,0.2)',
+            strokeColor: "rgba(20,120,20,1)",
             data: [28, 48, 40, 19, 86, 27, 90]
           }
         ]
@@ -45,7 +48,6 @@ export default {
   mounted () {
     let data = Object.assign({},this.datacollection,this.data)
     let options = Object.assign({},this.optionsInit,this.options)
-    console.log(this)
     this.renderChart(data,options)
   }
 }

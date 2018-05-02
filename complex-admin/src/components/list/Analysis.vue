@@ -2,15 +2,15 @@
    <div class="analysis">
       <div class="analysisCenter">
           <line-chart
-        :width="300"
-        :height="200"></line-chart>
+            :width="300"
+            :height="300">
+          </line-chart>
       </div>
    </div>
 </template>
 
 <script>
 import {LineChart} from '@/public/chart'
-console.log(LineChart)
 
 export default {
     components: {
@@ -33,7 +33,7 @@ export default {
   padding:20px;
   .analysisCenter{
     width:100%;
-    padding:20px 0;
+    padding:20px;
     background:@minor-color-4;
   }
 }

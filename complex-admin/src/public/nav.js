@@ -1,8 +1,30 @@
+
+/*
+  这里对导航做了处理只遍历了三级页面
+*/
+
 const Nav = [{
-    title:'列表信息', // 主title
-    icon:'el-icon-menu', // 一级导航图标
+  title:'列表信息', // 主title
+  icon:'fa fa-signal fa-lg', // 一级导航图标
+  link:[{
+    router:'/', //  一级导航路径
+    title:'数据列表', //  一级导航title
+  },{
+    router:'/analysis',
+    title:'拖拽列表',
+  }],
+  children:[{  // 二级导航
+    title:'选项4',
     link:[{
-      router:'/', //  一级导航路径
+      router:'/none',
+      title:'不存在的页面二'
+    }]
+  }]
+},{
+    title:'表单处理', // 主title
+    icon:'fa fa-check-square-o fa-lg', // 一级导航图标
+    link:[{
+      router:'/1', //  一级导航路径
       title:'数据列表', //  一级导航title
     },{
       router:'/analysis',
@@ -16,8 +38,16 @@ const Nav = [{
       }]
     }]
   },{
+    title:'图表数据',
+    icon:'fa fa-area-chart fa-lg',
+    link:[{
+      router:'/error/403',
+      title:'403',
+    }],
+
+  },{
     title:'错误界面',
-    icon:'el-icon-error',
+    icon:'fa fa-times-circle fa-lg',
     link:[{
       router:'/error/403',
       title:'403',
@@ -29,7 +59,11 @@ const Nav = [{
       title:'500',
     }],
 
-}]
+  },{
+    title:'错误界面',
+    icon:'fa fa-times-circle fa-lg',
+    router:'/error/403',
+  }]
 
 
 export {Nav}
