@@ -23,7 +23,7 @@
       <div class="tableWrap">
           <el-table :data="tableData" v-loading="loading">
             <el-table-column  type="selection"  width="55" > </el-table-column>
-            <el-table-column  prop="userName" label="姓名" width="180" align="center"></el-table-column>
+            <el-table-column  prop="userName" label="姓名" width="1580" align="center"></el-table-column>
             <el-table-column  prop="address" label="地址" align="center"></el-table-column>
             <el-table-column label="操作" align="center">
               <template slot-scope="scope">
@@ -78,7 +78,7 @@ export default {
 @import url("../../theme/base-theme.less");
 
 .homeWrap{
-   width:99.8%;
+   width:100%;
    height:100%;
    padding:20px;
    .search{
@@ -95,6 +95,7 @@ export default {
       }
    }
   .tableWrap{
+    max-width:100%;
     padding:10px 20px 60px;
     background: @minor-color-4;
   }
