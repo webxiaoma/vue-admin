@@ -36,6 +36,8 @@ import {
   Input,
   Checkbox,
   Tooltip,
+  Table,
+  TableColumn,
 } from 'element-ui'
 
 Vue.use(Container)
@@ -59,6 +61,8 @@ Vue.use(FormItem)
 Vue.use(Input)
 Vue.use(Checkbox)
 Vue.use(Tooltip)
+Vue.use(Table)
+Vue.use(TableColumn)
 
 
 

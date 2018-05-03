@@ -1,3 +1,8 @@
+
+/***
+ * 这里是做的一些导航，实际项目中导航可能从后台获取，导航使用的就是 element 中的 el-menu，
+ * 当然如果你是从后台获取的导航数据，完全可以删除这里，去Aside.vue 中自己去使用el-menu 组件生成导航
+***/
 const Nav = [{
     title:'列表信息', // title名
     icon:'fa fa-signal fa-lg', // 导航icon图标

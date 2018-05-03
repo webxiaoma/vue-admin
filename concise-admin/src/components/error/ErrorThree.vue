@@ -2,11 +2,11 @@
   <div class="errorWarp">
      <div class="errorCenter">
         <el-row :gutter="10">
-          <el-col :xs="24" :sm="14" :md="14" :lg="13" :xl="13">
+          <el-col :xs="24" :sm="16" :md="15" :lg="14" :xl="14">
             <div class="picture">
             </div>
             </el-col>
-          <el-col :xs="24" :sm="10" :md="10" :lg="11" :xl="11">
+          <el-col :xs="24" :sm="8" :md="9" :lg="10" :xl="10">
             <div class="grid-content">
               <h3>500</h3>
               <p class="text">抱歉，服务器发生错误</p>
@@ -59,7 +59,7 @@ export default {
          width:550px;
          height:200px;
          display:flex;
-         margin-right:40px;
+         margin-right:10px;
          background: url('../../assets/fonts/500.svg') no-repeat center  center;
          background-size: auto 100%;
       }
