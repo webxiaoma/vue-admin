@@ -113,6 +113,8 @@ export default {
 .headerWrap{
   height:64px;
   display:flex;
+  position: relative;
+  z-index: 2;
   background:@minor-color-4;
   box-shadow: 1px 0px 6px 1px @border-color;
   .el-row{

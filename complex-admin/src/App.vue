@@ -25,6 +25,7 @@ body,html {
   margin:0;
   background-color: @body-color;
   font-size:14px;
+  overflow: hidden;
 }
 *{
   box-sizing: border-box;

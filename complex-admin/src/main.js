@@ -11,6 +11,7 @@ Vue.config.productionTip = false
 
 import './assets/fonts/iconfont.css'  // 引入icon 图标
 
+// element 组件
 import 'element-ui/lib/theme-chalk/index.css'  // element 样式
 import 'element-ui/lib/theme-chalk/display.css';
 
@@ -75,9 +76,9 @@ Vue.use(Select)
 Vue.use(Option)
 Vue.use(Loading)
 
-// chartJs 组件
-import { Bar } from 'vue-chartjs'
-Vue.use(Bar)
+// draggable 拖拽 组件
+import draggable from 'vuedraggable'
+Vue.use(draggable)
 
 /* eslint-disable no-new */
 new Vue({

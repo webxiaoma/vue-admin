@@ -119,6 +119,7 @@ export default {
      flex-direction: column;
       .routerView{
           width:100%;
+          height:0px;
           display:flex;
           flex-direction: column;
           flex:1;

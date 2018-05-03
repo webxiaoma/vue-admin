@@ -33,7 +33,7 @@ Mock.mock('/api/login','post',(req, res)=>{
 //  首页处理
 
 const list = Mock.mock({
-  'list|1-5':[{
+  'list|1-15':[{
       userName:'小王',
       address:'上海'
     },{

@@ -21,9 +21,9 @@
 
       </div>
       <div class="tableWrap">
-          <el-table :data="tableData" v-loading="loading">
+          <el-table :data="tableData" v-loading="loading"  height="500">
             <el-table-column  type="selection"  width="55" > </el-table-column>
-            <el-table-column  prop="userName" label="姓名" width="1580" align="center"></el-table-column>
+            <el-table-column  prop="userName" label="姓名" align="center"></el-table-column>
             <el-table-column  prop="address" label="地址" align="center"></el-table-column>
             <el-table-column label="操作" align="center">
               <template slot-scope="scope">
@@ -79,7 +79,6 @@ export default {
 
 .homeWrap{
    width:100%;
-   height:100%;
    padding:20px;
    .search{
       padding:25px 20px 10px 20px;
@@ -98,6 +97,9 @@ export default {
     max-width:100%;
     padding:10px 20px 60px;
     background: @minor-color-4;
+    .el-table{
+      //  max-height:400px;
+    }
   }
 
 }
