@@ -1,6 +1,6 @@
 <template>
   <div class="homeWrap">
-       首页
+        首页
   </div>
 </template>
 
@@ -9,8 +9,8 @@ export default {
   data () {
     return {
 
+      }
     }
-  }
 }
 </script>
 
@@ -18,9 +18,10 @@ export default {
 
 .homeWrap{
    width:100%;
-   height:100%;
    display:flex;
    justify-content:center;
    font-size:50px;
+   padding: 20px;
+   background: #fff;
 }
 </style>

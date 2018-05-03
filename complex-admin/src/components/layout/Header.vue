@@ -12,13 +12,20 @@
             <el-col :span="14" type="flex">
                 <div class="personWrap">
                     <ul class="ul">
-                      <li class="problem">
-                        <el-tooltip effect="dark" content="使用帮助" placement="bottom">
-                          <a href="https://github.com/webxiaoma/vue-admin/tree/dev/complex-admin">
-                                <i class="iconfont icon-problem"></i>
-                          </a>
-                        </el-tooltip>
-                      </li>
+                       <li class="itemLi">
+                          <el-tooltip effect="dark" content="使用帮助" placement="bottom">
+                            <router-link to="/">
+                                  <i class="fa fa-question-circle-o"></i>
+                            </router-link>
+                          </el-tooltip>
+                        </li>
+                        <li class="itemLi" @click="fullScreen">
+                          <el-tooltip effect="dark" :content="isFullScreen?'取消全屏或按F11':'全屏显示或按F11'" placement="bottom">
+                            <a href="javascript:;">
+                                <i class="fa fa-arrows-alt"></i>
+                            </a>
+                          </el-tooltip>
+                        </li>
                       <li class="person">
                           <el-dropdown>
                             <div class="dropdown-link">
@@ -70,7 +77,7 @@ export default {
   name: 'HeaderLayout',
   data() {
     return {
-
+       isFullScreen:false,
     }
   },
   computed: {
@@ -83,6 +90,28 @@ export default {
     },
     exitLogin(){
       this.$router.push('/login')
+    },
+    fullScreen(){ // 是否全屏显示
+        if(this.isFullScreen){
+            if(document.cancelFullScreen) {
+              document.cancelFullScreen();
+            } else if(document.mozCancelFullScreen) {
+              document.mozCancelFullScreen();
+            } else if(document.webkitCancelFullScreen) {
+              document.webkitCancelFullScreen();
+            }
+        }else{
+            if(document.documentElement.requestFullScreen){
+              document.documentElement.requestFullScreen
+            }else if(document.documentElement.webkitRequestFullScreen){
+              document.documentElement.webkitRequestFullScreen()
+            }else if(document.documentElement.mozRequestFullScreen){
+              document.documentElement.mozRequestFullScreen()
+            }
+        }
+
+        this.isFullScreen = !this.isFullScreen;
+
     }
   }
 }
@@ -92,6 +121,8 @@ export default {
 @import url("../../theme/base-theme.less");
 
 .headerWrap{
+  position: relative;
+  z-index: 2;
    .header{
       min-height:64px;
       display:flex;
@@ -145,7 +176,7 @@ export default {
               background: @bg-hover-2;
             }
           }
-          .problem{
+          .itemLi{
             width:36px;
             height:100%;
 
@@ -158,8 +189,15 @@ export default {
               i{
                 font-size:17px;
                 color:@font-color-2;
+                transition:all .2s ease-in;
               }
             }
+            &:hover{
+              i{
+                font-size:22px;
+              }
+            }
+
           }
           .person{
             position: relative;

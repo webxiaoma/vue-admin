@@ -28,7 +28,7 @@ const router = new Router({
           name: '数据分析',
           component: Drag,
           meta:{
-            breadcrumb:['列表信息','数据分析'],
+            breadcrumb:['列表信息','拖拽列表'],
           }
         },{
           path: 'login',

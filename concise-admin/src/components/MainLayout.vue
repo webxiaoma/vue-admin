@@ -5,8 +5,8 @@
           <div class="left">
             <aside-layout></aside-layout>
           </div>
-          <div class="right">
-              <el-container>
+          <div class="right" :style="isAsideNav?{marginLeft:'64px'}:''">
+             <el-container>
                 <el-container>
                   <el-header>
                     <header-layout></header-layout>
@@ -18,19 +18,23 @@
                           <footer-layout></footer-layout>
                       </div>
                     </div>
-
                   </el-main>
                 </el-container>
               </el-container>
           </div>
+
       </div>
 
+<!--登录界面-->
       <div class="loayoutLogin" v-show="isLoginPage">
          <router-view></router-view>
          <div class="footerLayout">
           <footer-layout></footer-layout>
          </div>
       </div>
+
+
+
    </div>
 
 
@@ -88,16 +92,20 @@ export default {
 }
 .loayoutMain{
     height:100%;
-    display:flex;
     .left{
+      min-height:100%;
+      float: left;
       background:@minor-color-1;
     }
     .right{
-      height:100%;
-      flex-grow:1;
+      min-height:100%;
+      margin-left:256px;
+      transition:all .2s .05s linear;
+      display:flex;
     }
     .el-container{
-      height:100%;
+      min-height:100%;
+      flex-grow:1;
     }
     .el-header{
       min-height:64px;
@@ -111,6 +119,7 @@ export default {
      flex-direction: column;
       .routerView{
           width:100%;
+          height:0px;
           display:flex;
           flex-direction: column;
           flex:1;
