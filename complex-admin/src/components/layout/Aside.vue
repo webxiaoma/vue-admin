@@ -65,6 +65,9 @@ export default {
        pathAcitve:'/'
     }
   },
+  created () {
+    this.pathAcitve = this.$route.fullPath;
+  },
   watch:{
    $route(to,from){
       this.pathAcitve = to.fullPath;
@@ -154,6 +157,7 @@ export default {
           color:@font-color-3 !important;
           i{
             margin-right:5px;
+            font-size:20px;
           }
         }
         /deep/.el-submenu__title:hover{

@@ -76,9 +76,8 @@ Vue.use(Select)
 Vue.use(Option)
 Vue.use(Loading)
 
-// draggable 拖拽 组件
-import draggable from 'vuedraggable'
-Vue.use(draggable)
+
+
 
 /* eslint-disable no-new */
 new Vue({
