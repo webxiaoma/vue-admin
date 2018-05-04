@@ -3,14 +3,21 @@
       <div class="dragCenter">
          <div class="title">
             vuedraggable 插件是 Vue 拖拽组件
-           <a href="https://github.com/SortableJS/Vue.Draggable"> Vue.Draggable</a>
+           <a href="https://github.com/SortableJS/Vue.Draggable" target="_blank"> Vue.Draggable</a>
          </div>
+         <p class="tip">状态：{{DraggingStatus}}</p>
          <div class="draggable">
             <el-row>
               <el-col :span="7">
                 <div class="one">
-                    <draggable v-model="draggData1" :options="dragOptions" :move="onMove" @start="isDragging=true" @end="isDragging=false">
-                      <transition-group name="list-one">
+                    <draggable  v-model="draggData1"
+                                :options="dragOptions"
+                                @start="onStart"
+                                :move="onMove"
+                                @end="onEnd"
+                                @remove="onRemove"
+                                @update="updata">
+                      <transition-group>
                           <div v-for="items in draggData1" :key="items.order" class="item">
                             {{items.name}}
                           </div>
@@ -20,8 +27,14 @@
               </el-col>
               <el-col :span="7">
                 <div class="one">
-                    <draggable v-model="draggData1" :options="dragOptions" >
-                      <transition-group  name="list-two">
+                    <draggable  v-model="draggData2"
+                                :options="dragOptions"
+                                @start="onStart"
+                                :move="onMove"
+                                @end="onEnd"
+                                @remove="onRemove"
+                                @update="updata">
+                      <transition-group >
                           <div v-for="items in draggData2" :key="items.order" class="item">
                             {{items.name}}
                           </div>
@@ -31,8 +44,14 @@
               </el-col>
               <el-col :span="7">
                 <div class="one">
-                    <draggable v-model="draggData1" :options="dragOptions">
-                      <transition-group  name="list-three">
+                    <draggable  v-model="draggData3"
+                                :options="dragOptions"
+                                @start="onStart"
+                                :move="onMove"
+                                @end="onEnd"
+                                @remove="onRemove"
+                                @update="updata">
+                      <transition-group>
                           <div v-for="items in draggData3" :key="items.order" class="item">
                             {{items.name}}
                           </div>
@@ -47,11 +66,12 @@
 </template>
 
 <script>
+import draggable from 'vuedraggable'
 
 export default {
    data () {
       return {
-        isDragging: false,
+         DraggingStatus: "",
          draggData1:[{
              name:'Vue 教程',
              order:1,
@@ -96,17 +116,31 @@ export default {
     computed:{
         dragOptions () {
           return  {
-            animation: 0,
+            animation: 2,
             group: 'description',
-            disabled: !this.editable,
-            ghostClass: 'ghost'
+            disabled: false,
+            ghostClass: 'ghost',
           };
         },
     },
     methods:{
-      onMove ({relatedContext, draggedContext}) {
-         console.log(relatedContext, draggedContext)
+      onStart(evt){ //移动开始时的事件
+        console.log(evt)
+        this.DraggingStatus = "开始移动";
       },
+      onMove(evt) { // 移动时的事件
+         this.DraggingStatus = "移动中";
+      },
+      onEnd(evt){  // 移动后的事件
+         this.DraggingStatus = "移动结束";
+      },
+      onRemove(evt){ //移除事件
+      },
+      updata(evt) { // 数据更新时的事件
+      }
+    },
+    components:{
+      draggable,
     }
 
 }
@@ -129,11 +163,18 @@ export default {
       align-items:center;
       justify-content: center;
       margin-bottom:30px;
+      font-size:20px;
       a{
         margin-left:10px;
-        font-size:18px;
+        font-size:22px;
         color:@minor-color-3;
       }
+    }
+    .tip{
+      width:100%;
+      height:60px;
+      font-size:20px;
+
     }
     .draggable{
       .el-col{
@@ -141,6 +182,7 @@ export default {
       }
       .one{
         width:100%;
+        min-height:100px;
         padding:10px 30px;
         background:@minor-color-1;
         border-radius:5px;

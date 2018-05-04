@@ -6,10 +6,12 @@ import MainLayout from '@/components/MainLayout'
 import {Home,Drag} from '@/components/list'
 import Login from '@/components/Login'
 import {ErrorOne,ErrorTwo,ErrorThree} from '@/components/error'
+import {Upload,EditorOne,EditorTwo, MarkDown} from '@/components/form'
 
 Vue.use(Router)
 
 const router = new Router({
+  mode: 'history',
   routes: [
     {
       path: '/',
@@ -29,6 +31,34 @@ const router = new Router({
           component: Drag,
           meta:{
             breadcrumb:['列表信息','拖拽列表'],
+          }
+        },{
+          path: '/upload',
+          name: '文件上传',
+          component: Upload,
+          meta:{
+            breadcrumb:['表单信息','文件上传'],
+          }
+        },{
+          path: '/editor_one',
+          name: '富文本编辑',
+          component: EditorOne,
+          meta:{
+            breadcrumb:['表单信息','富文本编辑一'],
+          }
+        },{
+          path: '/editor_two',
+          name: '富文本编辑',
+          component: EditorTwo,
+          meta:{
+            breadcrumb:['表单信息','富文本编辑二'],
+          }
+        },{
+          path: '/markdown',
+          name: 'MarkDown',
+          component: MarkDown,
+          meta:{
+            breadcrumb:['表单信息','MarkDown'],
           }
         },{
           path: 'login',

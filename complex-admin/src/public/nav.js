@@ -4,16 +4,36 @@
 */
 
 const Nav = [{
-  title:'列表信息', // 主title
-  icon:'fa fa-signal fa-lg', // 一级导航图标
-  link:[{
-    router:'/', //  一级导航路径
-    title:'数据列表', //  一级导航title
+    title:'列表信息', // 主title
+    icon:'fa fa-signal fa-lg', // 一级导航图标
+    link:[{
+      router:'/', //  一级导航路径
+      title:'数据列表', //  一级导航title
+    },{
+      router:'/drag',
+      title:'拖拽列表',
+    }],
   },{
-    router:'/drag',
-    title:'拖拽列表',
-  }],
-},{
+    title:'表单信息', // 主title
+    icon:'fa fa-check-square fa-lg', // 一级导航图标
+    link:[{
+      router:'/upload', //  一级导航路径
+      title:'文件上传', //  一级导航title
+    },{
+      router:'/editor_one',
+      title:'富文本框一',
+    },{
+      router:'/editor_two',
+      title:'富文本框二',
+    },{
+      router:'/markdown',
+      title:'MarkDown编辑器',
+    }],
+  },{
+    title:'数据图表', // 主title
+    icon:'fa fa-area-chart fa-lg', // 一级导航图标
+    router:'/none'
+  },{
     title:'错误界面',
     icon:'fa fa-times-circle fa-lg',
     link:[{
