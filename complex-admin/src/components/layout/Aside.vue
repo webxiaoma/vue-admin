@@ -155,9 +155,9 @@ export default {
         }
         /deep/.el-submenu__title{
           color:@font-color-3 !important;
-          i{
-            margin-right:5px;
-            font-size:20px;
+          .fa{
+            display:inline-block;
+            width:20px;
           }
         }
         /deep/.el-submenu__title:hover{
