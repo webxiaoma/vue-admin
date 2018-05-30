@@ -27,7 +27,7 @@
             text-color="#b8b7b7"
             active-text-color="#fff"
             background-color="#000c17">
-              <div  v-for="(item,index) in nav" :key="index+'a'">
+              <!-- <div  v-for="(item,index) in nav" :key="index+'a'">
                   <el-menu-item v-show="item.router"  :index="item.router?item.router:''" :key="index+'b'">
                     <i :class="item.icon"></i>
                     <span slot="title">{{item.title}}</span>
@@ -43,7 +43,36 @@
                           <el-menu-item v-for="linkChild in child.link" :key="linkChild.router" :index="linkChild.router">{{linkChild.title}}</el-menu-item>
                         </el-submenu>
                   </el-submenu>
-              </div>
+              </div> -->
+              <el-submenu index="1">
+                <template slot="title">
+                  <i class="fa fa-signal fa-lg"></i>
+                  <span>列表信息</span>
+                </template>
+                <el-menu-item-group title="分组2">
+                  <el-menu-item index="/">列表一</el-menu-item>
+                  <el-menu-item index="/none">不存在的页面一</el-menu-item>
+                </el-menu-item-group>
+                <el-submenu index="1-4">
+                  <template slot="title">选项4</template>
+                  <el-menu-item index="/none">不存在的页面二</el-menu-item>
+                </el-submenu>
+              </el-submenu>
+              <el-menu-item index="/home">
+                <i class="fa fa-check-square-o fa-lg"></i>
+                <span slot="title">表单处理</span>
+              </el-menu-item>
+               <el-submenu index="3">
+                <template slot="title">
+                  <i class="fa fa-times-circle fa-lg"></i>
+                  <span>错误界面</span>
+                </template>
+                <el-menu-item-group title="分组2">
+                  <el-menu-item index="/error/403">403</el-menu-item>
+                  <el-menu-item index="/error/404">404</el-menu-item>
+                  <el-menu-item index="/error/500">500</el-menu-item>
+                </el-menu-item-group>
+               </el-submenu>
           </el-menu>
         </el-col>
       </el-row>
@@ -165,6 +194,7 @@ export default {
         }
       }
     }
+
 
 }
 

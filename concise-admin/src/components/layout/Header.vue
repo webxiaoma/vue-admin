@@ -25,6 +25,7 @@
                         </a>
                       </el-tooltip>
                     </li>
+
                     <li class="person">
                         <el-dropdown>
                           <div class="dropdown-link">
@@ -183,6 +184,14 @@ export default {
           i{
              font-size:22px;
            }
+        }
+        >span{
+          width:100%;
+          height:100%;
+        }
+        .popoverContent{
+          width:40px;
+          height:40px;
         }
 
       }

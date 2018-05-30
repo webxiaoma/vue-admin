@@ -38,6 +38,7 @@ import {
   Tooltip,
   Table,
   TableColumn,
+  Popover,
 } from 'element-ui'
 
 Vue.use(Container)
@@ -50,6 +51,7 @@ Vue.use(Col)
 Vue.use(Menu)
 Vue.use(Submenu)
 Vue.use(MenuItem)
+Vue.use(MenuItemGroup)
 Vue.use(Dropdown)
 Vue.use(DropdownMenu)
 Vue.use(DropdownItem)
@@ -63,6 +65,7 @@ Vue.use(Checkbox)
 Vue.use(Tooltip)
 Vue.use(Table)
 Vue.use(TableColumn)
+Vue.use(Popover)
 
 
 
