@@ -25,7 +25,6 @@
                         </a>
                       </el-tooltip>
                     </li>
-
                     <li class="person">
                         <el-dropdown>
                           <div class="dropdown-link">
