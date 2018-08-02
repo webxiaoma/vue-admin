@@ -22,7 +22,6 @@
   </div>
 </template>
 
-
 <script>
 export default {
 
@@ -31,7 +30,6 @@ export default {
 
 <style lang="less" scoped>
 @import url("../../theme/base-theme.less");
-
 
 .errorWarp{
    width:100%;
@@ -106,8 +104,6 @@ export default {
       }
   }
 }
-
-
 
 }
 
