@@ -71,89 +71,85 @@
 </template>
 
 <script>
-import {mapState,mapActions} from 'vuex'
-import {RulesUserName,RulesPassword,RulesPhone,RulesCorde} from '@/public/rules'
+import {mapState, mapActions} from 'vuex'
+import {RulesUserName, RulesPassword, RulesPhone, RulesCorde} from '@/public/rules'
 
 export default {
   data () {
-    return {  // 这里的数据实际开发中视情况保留
-       time:60,
-       isBtn:true,
-       interval:'',
-       loadingOne: false,
-       checked:false,
-       rules1:{
-          userName: [
-            { validator: RulesUserName, trigger: 'blur' }
-          ],
-          password: [
-            { validator: RulesPassword, trigger: 'blur' }
-          ],
-        },
-        form2: {
-          phone:'',
-          corde: '',
-        },
-        rules2:{
-          phone: [
-            { validator: RulesPhone, trigger: 'blur' }
-          ],
-          corde: [
-            { validator: RulesCorde, trigger: 'blur' }
-          ],
-        }
+    return { // 这里的数据实际开发中视情况保留
+      time: 60,
+      isBtn: true,
+      interval: '',
+      loadingOne: false,
+      checked: false,
+      rules1: {
+        userName: [
+          { validator: RulesUserName, trigger: 'blur' }
+        ],
+        password: [
+          { validator: RulesPassword, trigger: 'blur' }
+        ]
+      },
+      form2: {
+        phone: '',
+        corde: ''
+      },
+      rules2: {
+        phone: [
+          { validator: RulesPhone, trigger: 'blur' }
+        ],
+        corde: [
+          { validator: RulesCorde, trigger: 'blur' }
+        ]
+      }
     }
   },
-  computed:{
-    ...mapState('login',['loginData']),
+
+  computed: {
+    ...mapState('login', ['loginData'])
   },
-  methods:{
-    ...mapActions('login',['loginRequest']),
-    submit(){  // 提交按钮二
-       this.$refs.loginDataOne.validate((valid) => { // 登录表单验证
-              if (valid) {
-                 this.loadingOne = true;
+  methods: {
+    ...mapActions('login', ['loginRequest']),
+    submit () { // 提交按钮二
+      this.$refs.loginDataOne.validate((valid) => { // 登录表单验证
+        if (valid) {
+          this.loadingOne = true
 
-                this.loginRequest().then(res=>{
-                  console.log(res)
-                  this.loadingOne = false;
-                  this.$router.push('/')
-                }).catch(error=>{
-                  console.log(res)
-
-                });
-
-              } else {
-                return false;
-              }
-       });
+          this.loginRequest().then(res => {
+            console.log(res)
+            this.loadingOne = false
+            this.$router.push('/')
+          })
+        } else {
+          return false
+        }
+      })
     },
-    submitTwo(){ // 提交按钮二
-       this.$refs.loginDataTwo.validate((valid) => { // 登录表单验证
-              if (valid) {
-                 this.loadingOne = true;
+    submitTwo () { // 提交按钮二
+      this.$refs.loginDataTwo.validate((valid) => { // 登录表单验证
+        if (valid) {
+          this.loadingOne = true
 
-                // 验证通过
-                setTimeout(()=>{
-                  this.loadingOne = false;
-                },4000)
-
-              } else {
-                return false;
-              }
-       });
+          // 验证通过
+          setTimeout(() => {
+            this.loadingOne = false
+          }, 4000)
+        } else {
+          return false
+        }
+      })
     },
-    requireCorde(){ // 获取验证码
-        this.isBtn = false;
-        this.interval = setInterval(()=>{
-           if(this.time !== 0){
-              this.time--
-           }else{
-             clearInterval(this.interval)
-             this.isBtn = false;
-             this.time =60;
-           }
-        },1000)
+    requireCorde () { // 获取验证码
+      this.isBtn = false
+      this.interval = setInterval(() => {
+        if (this.time !== 0) {
+          this.time--
+        } else {
+          clearInterval(this.interval)
+          this.isBtn = false
+          this.time = 60
+        }
+      }, 1000)
     }
   }
 }
