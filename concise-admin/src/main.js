@@ -5,13 +5,10 @@ import App from './App'
 import store from './store'
 import router from './router'
 
-Vue.config.productionTip = false
+import './assets/fonts/iconfont.css' // 引入icon 图标
 
-
-import './assets/fonts/iconfont.css'  // 引入icon 图标
-
-import 'element-ui/lib/theme-chalk/index.css'  // element 样式
-import 'element-ui/lib/theme-chalk/display.css';
+import 'element-ui/lib/theme-chalk/index.css' // element 样式
+import 'element-ui/lib/theme-chalk/display.css'
 
 import {
   Container,
@@ -38,8 +35,10 @@ import {
   Tooltip,
   Table,
   TableColumn,
-  Popover,
+  Popover
 } from 'element-ui'
+
+Vue.config.productionTip = false
 
 Vue.use(Container)
 Vue.use(Header)
@@ -66,9 +65,6 @@ Vue.use(Tooltip)
 Vue.use(Table)
 Vue.use(TableColumn)
 Vue.use(Popover)
-
-
-
 
 /* eslint-disable no-new */
 new Vue({

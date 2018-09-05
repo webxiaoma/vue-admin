@@ -5,15 +5,11 @@ import App from './App'
 import store from './store'
 import router from './router'
 
-require('./mock') // 引入mock 假数据
-Vue.config.productionTip = false
-
-
-import './assets/fonts/iconfont.css'  // 引入icon 图标
+import './assets/fonts/iconfont.css' // 引入icon 图标
 
 // element 组件
-import 'element-ui/lib/theme-chalk/index.css'  // element 样式
-import 'element-ui/lib/theme-chalk/display.css';
+import 'element-ui/lib/theme-chalk/index.css' // element 样式
+import 'element-ui/lib/theme-chalk/display.css'
 
 import {
   Container,
@@ -26,7 +22,6 @@ import {
   Menu,
   Submenu,
   MenuItem,
-  MenuItemGroup,
   Dropdown,
   DropdownMenu,
   DropdownItem,
@@ -44,8 +39,11 @@ import {
   TableColumn,
   Select,
   Option,
-  Loading,
+  Loading
 } from 'element-ui'
+
+require('./mock') // 引入mock 假数据
+Vue.config.productionTip = false
 
 Vue.use(Container)
 Vue.use(Header)
@@ -75,9 +73,6 @@ Vue.use(TableColumn)
 Vue.use(Select)
 Vue.use(Option)
 Vue.use(Loading)
-
-
-
 
 /* eslint-disable no-new */
 new Vue({
